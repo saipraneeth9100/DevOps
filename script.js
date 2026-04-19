@@ -9,7 +9,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('trainingForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button');
-    btn.innerText = "Sending... 🚀";
+    btn.innerText = "Sending Application... 🚀";
     btn.disabled = true;
 
     try {
@@ -22,10 +22,10 @@ document.getElementById('trainingForm').addEventListener('submit', async functio
             alert("Success! Your application has been sent to Praneeth.");
             this.reset();
         } else {
-            alert("Error sending form. Please check your connection.");
+            alert("Error sending form. Please check your internet connection.");
         }
     } catch (error) {
-        alert("Submission failed. Try again.");
+        alert("Submission failed. Please try again later.");
     } finally {
         btn.innerText = "Send Application";
         btn.disabled = false;
