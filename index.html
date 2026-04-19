@@ -3,63 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps and AWS Training</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>DevOps & AWS Masterclass</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Added Google Fonts for a premium look -->
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <h1>Welcome to DevOps and AWS Training</h1>
-            <p>Your journey to mastering cloud technologies starts here!</p>
-            <a href="#courses" class="cta-button">Explore Courses</a>
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>Master <span class="aws-color">DevOps</span> & <span class="aws-color">AWS</span></h1>
+            <p>Deploy faster, scale higher, and dominate the cloud industry.</p>
+            <div class="hero-btns">
+                <a href="#courses" class="cta-button">Explore Courses</a>
+                <a href="#contact" class="cta-secondary">Get Mentored</a>
+            </div>
         </div>
     </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide world-class training in DevOps and AWS, empowering individuals with the skills needed to thrive in the cloud computing era.</p>
-    </section>
+    <main class="container">
+        <section id="about" class="reveal">
+            <div class="section-title">
+                <h2>Why Us?</h2>
+                <div class="underline"></div>
+            </div>
+            <p class="about-text">We bridge the gap between theory and industry-grade infrastructure.</p>
+        </section>
 
-    <section id="courses">
-        <h2>Our Courses</h2>
-        <ul>
-            <li>Introduction to DevOps</li>
-            <li>AWS Fundamentals</li>
-            <li>Continuous Integration and Continuous Deployment (CI/CD)</li>
-            <li>Terraform for Infrastructure as Code</li>
-        </ul>
-    </section>
+        <section id="courses" class="reveal">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+            </div>
+            <div class="grid">
+                <div class="card"><h3>Intro to DevOps</h3><p>Master Linux & Git</p></div>
+                <div class="card highlight"><h3>AWS Architect</h3><p>Full Solutions Design</p></div>
+                <div class="card"><h3>CI/CD Pipelines</h3><p>Jenkins & GitHub Actions</p></div>
+                <div class="card"><h3>Infrastructure</h3><p>Terraform & Ansible</p></div>
+            </div>
+        </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer personalized mentoring, live projects, and hands-on labs to ensure practical experience.</p>
-    </section>
+        <section id="testimonials" class="reveal">
+            <div class="testimonial-grid">
+                <div class="t-card">
+                    <p>"Got a job at Top MNC after this!"</p>
+                    <strong>- John Doe</strong>
+                </div>
+                <div class="t-card">
+                    <p>"The hands-on labs are insane."</p>
+                    <strong>- Jane Smith</strong>
+                </div>
+            </div>
+        </section>
 
-    <section id="testimonials">
-        <h2>What Our Students Say</h2>
-        <blockquote>
-            <p>"This training changed my career! I acquired skills that got me a job in cloud computing!" - John Doe</p>
-        </blockquote>
-        <blockquote>
-            <p>"The hands-on approach and expert instructors made learning fun and effective!" - Jane Smith</p>
-        </blockquote>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="/submit-form" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <section id="contact" class="reveal">
+            <div class="contact-box">
+                <h2>Ready to Start?</h2>
+                <form id="devopsForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea placeholder="Tell us your goals" rows="4"></textarea>
+                    <button type="submit" class="cta-button">Launch My Career</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 DevOps and AWS Training. All rights reserved.</p>
+        <p>&copy; 2026 DevOps & AWS Training. Powered by the Cloud.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
