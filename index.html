@@ -3,73 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps & AWS Masterclass</title>
+    <title>DevOps & AWS Academy | Master the Cloud</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Added Google Fonts for a premium look -->
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">DevOps<span>Academy</span></div>
+        <div class="nav-links">
+            <a href="#about">Philosophy</a>
+            <a href="#courses">Curriculum</a>
+            <a href="#path">Learning Path</a>
+            <a href="#contact" class="nav-cta">Start Training</a>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="hero-content fade-in">
-            <h1>Master <span class="aws-color">DevOps</span> & <span class="aws-color">AWS</span></h1>
-            <p>Deploy faster, scale higher, and dominate the cloud industry.</p>
+            <span class="badge-new">Batch Starting Soon 🚀</span>
+            <h1>Zero to <span class="aws-color">Cloud Engineer</span></h1>
+            <p>Practical, project-based training for Freshers & Professionals. Master the tools used by Netflix, Amazon, and Google.</p>
             <div class="hero-btns">
-                <a href="#courses" class="cta-button">Explore Courses</a>
-                <a href="#contact" class="cta-secondary">Get Mentored</a>
+                <a href="#courses" class="cta-button">View Curriculum</a>
+                <a href="#contact" class="cta-secondary">Book Free Demo</a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <section id="about" class="reveal">
-            <div class="section-title">
-                <h2>Why Us?</h2>
-                <div class="underline"></div>
+        <!-- TRUST SECTION -->
+        <section class="trust-bar">
+            <p>Mastering Tools Used By:</p>
+            <div class="logo-grid">
+                <span>Docker</span> • <span>Kubernetes</span> • <span>Terraform</span> • <span>Ansible</span> • <span>Jenkins</span>
             </div>
-            <p class="about-text">We bridge the gap between theory and industry-grade infrastructure.</p>
         </section>
 
+        <!-- COURSES SECTION -->
         <section id="courses" class="reveal">
-            <div class="section-title">
-                <h2>Our Courses</h2>
+            <div class="section-header">
+                <h2>Our Specializations</h2>
+                <p>Tailored tracks for every career stage</p>
             </div>
             <div class="grid">
-                <div class="card"><h3>Intro to DevOps</h3><p>Master Linux & Git</p></div>
-                <div class="card highlight"><h3>AWS Architect</h3><p>Full Solutions Design</p></div>
-                <div class="card"><h3>CI/CD Pipelines</h3><p>Jenkins & GitHub Actions</p></div>
-                <div class="card"><h3>Infrastructure</h3><p>Terraform & Ansible</p></div>
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Fresher Track</h3>
+                    <p>Linux basics, Git workflow, Networking, and AWS Cloud Practitioner essentials.</p>
+                    <ul class="card-list">
+                        <li>Resume Building</li>
+                        <li>Mock Interviews</li>
+                    </ul>
+                </div>
+                <div class="card highlight">
+                    <div class="card-icon">⚡</div>
+                    <h3>Pro DevOps Engineer</h3>
+                    <p>Advanced CI/CD, Kubernetes Orchestration, and Multi-Cloud Architecture.</p>
+                    <ul class="card-list">
+                        <li>Real-world Migrations</li>
+                        <li>On-call Simulations</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>DevSecOps & SRE</h3>
+                    <p>Automated Security, Monitoring with Prometheus/Grafana, and Reliability Engineering.</p>
+                    <ul class="card-list">
+                        <li>Zero-Trust Security</li>
+                        <li>Incident Response</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="testimonials" class="reveal">
-            <div class="testimonial-grid">
-                <div class="t-card">
-                    <p>"Got a job at Top MNC after this!"</p>
-                    <strong>- John Doe</strong>
-                </div>
-                <div class="t-card">
-                    <p>"The hands-on labs are insane."</p>
-                    <strong>- Jane Smith</strong>
-                </div>
-            </div>
-        </section>
-
+        <!-- CONTACT SECTION -->
         <section id="contact" class="reveal">
-            <div class="contact-box">
-                <h2>Ready to Start?</h2>
-                <form id="devopsForm">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <textarea placeholder="Tell us your goals" rows="4"></textarea>
-                    <button type="submit" class="cta-button">Launch My Career</button>
+            <div class="glass-form">
+                <h2>Start Your Journey</h2>
+                <p>Fill out the form and our lead instructor will contact you.</p>
+                <form id="trainingForm">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <select id="experience" class="custom-select">
+                        <option value="fresher">I am a Fresher</option>
+                        <option value="experienced">I am a Professional (1+ Years)</option>
+                    </select>
+                    <textarea placeholder="Tell us about your career goals..." rows="4"></textarea>
+                    <button type="submit" class="cta-button full-width">Apply for Next Batch</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 DevOps & AWS Training. Powered by the Cloud.</p>
+        <p>&copy; 2026 DevOps Academy. Designed for the Future of Cloud.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
