@@ -1,130 +1,168 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps by Praneeth | Zero to Cloud Engineer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://googleapis.com" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="logo">DevOps by <span>Praneeth</span></div>
-        <div class="nav-links">
-            <a href="#tools">The Stack</a>
-            <a href="#courses">Curriculum</a>
-            <a href="#contact" class="nav-cta">Apply Now</a>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">DevOps by <span>Praneeth</span></div>
+    <div class="nav-links">
+        <a href="#tools">Stack</a>
+        <a href="#courses">Curriculum</a>
+        <a href="#contact" class="nav-cta glow-btn">Apply Now</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg"
+             class="main-devops-logo floating">
+
+        <span class="badge-new pulse">Mentor-Led Training 🚀</span>
+
+        <h1>Become a <span class="gradient-text">Cloud & DevOps Engineer</span></h1>
+
+        <p>
+            Learn by building real production infrastructure.
+            Master AWS, Kubernetes, CI/CD and land high-paying DevOps roles.
+        </p>
+
+        <div class="hero-btns">
+            <a href="#courses" class="cta-button glow-btn">View Curriculum</a>
+            <a href="#contact" class="cta-secondary">Join the Batch</a>
         </div>
-    </nav>
+    </div>
+</header>
 
-    <header class="hero">
-        <div class="hero-content fade-in">
-            <!-- Stable Hero Logo -->
-            <img src="https://githubusercontent.com" alt="DevOps Logo" class="main-devops-logo">
-            <span class="badge-new">Mentor-Led Training 🚀</span>
-            <h1>Zero to <span class="aws-color">Cloud/DevOps Engineer</span></h1>
-            <p>Master the exact tools and workflows used to manage global infrastructure. Hands-on training for Freshers and Professionals.</p>
-            <div class="hero-btns">
-                <a href="#courses" class="cta-button">View Learning Path</a>
-                <a href="#contact" class="cta-secondary">Join the Batch</a>
-            </div>
+<!-- MAIN -->
+<main class="container">
+
+<!-- STACK -->
+<section id="tools" class="reveal">
+    <div class="section-header">
+        <h2>Modern DevOps Stack</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"><span>Linux</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"><span>AWS</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>Kubernetes</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"><span>Jenkins</span></div>
+        <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"><span>Terraform</span></div>
+
+    </div>
+</section>
+
+<!-- WHY -->
+<section class="reveal">
+    <div class="section-header">
+        <h2>Why This Program?</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="grid">
+        <div class="card hover-glow">
+            <h3>🔥 Real Projects</h3>
+            <p>Hands-on CI/CD pipelines, Kubernetes, AWS deployments.</p>
         </div>
-    </header>
 
-    <main class="container">
-        <!-- TOOLS SHOWCASE - Using Raw GitHub Links for Stability -->
-        <section id="tools" class="reveal">
-            <div class="section-header">
-                <h2>Modern DevOps Stack</h2>
-                <p>Master the tools used by industry leaders</p>
-                <div class="underline"></div>
-            </div>
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Linux">
-                    <span>Linux</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Git">
-                    <span>Git & GitHub</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="AWS">
-                    <span>AWS Cloud</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Docker">
-                    <span>Docker</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Kubernetes">
-                    <span>Kubernetes</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Jenkins">
-                    <span>Jenkins CI/CD</span>
-                </div>
-                <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="Terraform">
-                    <span>Terraform</span>
-                </div>
-            </div>
-        </section>
+        <div class="card hover-glow">
+            <h3>⚡ Job Focused</h3>
+            <p>Interview scenarios, resume building, real DevOps workflows.</p>
+        </div>
 
-        <!-- TRAINING TRACKS -->
-        <section id="courses" class="reveal">
-            <div class="section-header">
-                <h2>Program Curriculum</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">🎓</div>
-                    <h3>For Freshers</h3>
-                    <p>Foundation building: Linux basics, Git workflow, Networking, and AWS Cloud Practitioner essentials.</p>
-                    <ul class="card-list">
-                        <li>OS Fundamentals</li>
-                        <li>Git & Version Control</li>
-                        <li>Project-Based Learning</li>
-                    </ul>
-                </div>
-                <div class="card highlight">
-                    <div class="card-icon">💼</div>
-                    <h3>For Professionals</h3>
-                    <p>Transition your career: Advanced CI/CD, Infrastructure as Code, and production scaling.</p>
-                    <ul class="card-list">
-                        <li>Advanced Automation</li>
-                        <li>Complex Architectures</li>
-                        <li>Interview Mastery</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="card hover-glow">
+            <h3>🎯 Mentor Support</h3>
+            <p>Direct guidance, doubt solving, career strategy.</p>
+        </div>
+    </div>
+</section>
 
-        <!-- CONTACT FORM -->
-        <section id="contact" class="reveal">
-            <div class="glass-form">
-                <h2>Start Your Transformation</h2>
-                <p>Register below to receive the detailed syllabus and batch timings.</p>
-                <form action="https://formspree.io" method="POST" id="trainingForm">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <select name="experience" class="custom-select">
-                        <option value="fresher">I am a Fresher / Student</option>
-                        <option value="experienced">I am a Working Professional</option>
-                    </select>
-                    <textarea name="goals" placeholder="What is your current goal with DevOps?" rows="4"></textarea>
-                    <button type="submit" class="cta-button full-width">Send Application</button>
-                </form>
-            </div>
-        </section>
-    </main>
+<!-- CURRICULUM -->
+<section id="courses" class="reveal">
+    <div class="section-header">
+        <h2>Program Curriculum</h2>
+        <div class="underline"></div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 DevOps by Praneeth. Real Skills. Real Infrastructure.</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="grid">
+        <div class="card">
+            <h3>🎓 Freshers</h3>
+            <p>Linux, Git, Networking, AWS basics.</p>
+        </div>
+
+        <div class="card highlight">
+            <h3>💼 Professionals</h3>
+            <p>Docker, Kubernetes, Terraform, CI/CD pipelines.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="reveal">
+    <div class="cta-box">
+        <h2>🚀 Limited Seats</h2>
+        <p>Next batch filling fast. Apply now.</p>
+        <a href="#contact" class="cta-button glow-btn">Apply Now</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+    <div class="glass-form">
+
+        <h2>Start Your Transformation</h2>
+
+        <form action="https://formspree.io/f/mkokzgrk" method="POST">
+
+            <input type="hidden" name="_subject" value="🚀 New DevOps Lead">
+
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <select name="level">
+                <option>Fresher</option>
+                <option>Working Professional</option>
+            </select>
+
+            <textarea name="goals" placeholder="Your career goals..." required></textarea>
+
+            <button type="submit" class="cta-button glow-btn">Send Application</button>
+        </form>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 DevOps by Praneeth 🚀</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+```
