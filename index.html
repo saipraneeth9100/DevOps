@@ -19,23 +19,24 @@
 
     <header class="hero">
         <div class="hero-content fade-in">
-            <!-- New Stable DevOps Infinity Logo -->
+            <!-- Stable Hero Logo -->
             <img src="https://githubusercontent.com" alt="DevOps Logo" class="main-devops-logo">
             <span class="badge-new">Mentor-Led Training 🚀</span>
             <h1>Zero to <span class="aws-color">Cloud/DevOps Engineer</span></h1>
-            <p>Master the exact tools and workflows used to manage global infrastructure. Professional training for Freshers and Experience Seekers.</p>
+            <p>Master the exact tools and workflows used to manage global infrastructure. Hands-on training for Freshers and Professionals.</p>
             <div class="hero-btns">
-                <a href="#courses" class="cta-button">View Curriculum</a>
+                <a href="#courses" class="cta-button">View Learning Path</a>
                 <a href="#contact" class="cta-secondary">Join the Batch</a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- TOOLS SHOWCASE - Optimized Stable Icons -->
+        <!-- TOOLS SHOWCASE - Using Raw GitHub Links for Stability -->
         <section id="tools" class="reveal">
             <div class="section-header">
                 <h2>Modern DevOps Stack</h2>
+                <p>Master the tools used by industry leaders</p>
                 <div class="underline"></div>
             </div>
             <div class="tools-grid">
@@ -56,12 +57,12 @@
                     <span>Docker</span>
                 </div>
                 <div class="tool-item">
-                    <img src="https://githubusercontent.com" alt="K8s">
+                    <img src="https://githubusercontent.com" alt="Kubernetes">
                     <span>Kubernetes</span>
                 </div>
                 <div class="tool-item">
                     <img src="https://githubusercontent.com" alt="Jenkins">
-                    <span>Jenkins</span>
+                    <span>Jenkins CI/CD</span>
                 </div>
                 <div class="tool-item">
                     <img src="https://githubusercontent.com" alt="Terraform">
@@ -70,9 +71,55 @@
             </div>
         </section>
 
-        <!-- REST OF YOUR CONTENT (Curriculum & Form) -->
-        <!-- ... (Keep your previous curriculum and contact section here) ... -->
-        
+        <!-- TRAINING TRACKS -->
+        <section id="courses" class="reveal">
+            <div class="section-header">
+                <h2>Program Curriculum</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3>For Freshers</h3>
+                    <p>Foundation building: Linux basics, Git workflow, Networking, and AWS Cloud Practitioner essentials.</p>
+                    <ul class="card-list">
+                        <li>OS Fundamentals</li>
+                        <li>Git & Version Control</li>
+                        <li>Project-Based Learning</li>
+                    </ul>
+                </div>
+                <div class="card highlight">
+                    <div class="card-icon">💼</div>
+                    <h3>For Professionals</h3>
+                    <p>Transition your career: Advanced CI/CD, Infrastructure as Code, and production scaling.</p>
+                    <ul class="card-list">
+                        <li>Advanced Automation</li>
+                        <li>Complex Architectures</li>
+                        <li>Interview Mastery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section id="contact" class="reveal">
+            <div class="glass-form">
+                <h2>Start Your Transformation</h2>
+                <p>Register below to receive the detailed syllabus and batch timings.</p>
+                <form action="https://formspree.io" method="POST" id="trainingForm">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <select name="experience" class="custom-select">
+                        <option value="fresher">I am a Fresher / Student</option>
+                        <option value="experienced">I am a Working Professional</option>
+                    </select>
+                    <textarea name="goals" placeholder="What is your current goal with DevOps?" rows="4"></textarea>
+                    <button type="submit" class="cta-button full-width">Send Application</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
