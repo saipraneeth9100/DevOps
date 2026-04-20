@@ -1,109 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps by Praneeth | Cloud & DevOps Training</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+:root { --amber: #f59e0b; --slate: #020617; --card: rgba(15, 23, 42, 0.85); }
 
-<nav class="navbar">
-    <div class="logo">DevOps by <span>Praneeth</span></div>
-    <div class="nav-links">
-        <a href="#tools">Tech Stack</a>
-        <a href="#courses">Curriculum</a>
-        <a href="#contact" class="nav-cta">Apply Now</a>
-    </div>
-</nav>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 
-<header class="hero">
-    <div class="hero-content">
-        <div class="infinity-logo">
-            <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-                <path d="M150,180 a60,60 0 1,1 0,-120 a60,60 0 1,1 0,120 Q250,180 350,60 a60,60 0 1,1 0,120 a60,60 0 1,1 0,-120 Q250,60 150,180 z" 
-                      fill="none" stroke="#f59e0b" stroke-width="20" stroke-linecap="round"/>
-            </svg>
-        </div>
+body { 
+    background-color: var(--slate);
+    background-image: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.9)), 
+                      url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');
+    background-size: cover; background-attachment: fixed; color: #fff;
+}
 
-        <h1>Become a <span>Cloud or DevOps Engineer</span></h1>
-        <p>Master AWS, Docker, and Kubernetes with production-grade projects and high-impact mentorship.</p>
+/* NAVBAR */
+.navbar { 
+    display: flex; justify-content: space-between; padding: 1.5rem 8%; 
+    position: fixed; width: 100%; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); z-index: 1000;
+}
+.logo span { color: var(--amber); }
+.nav-links a { margin-left: 20px; text-decoration: none; color: #cbd5e1; font-weight: 600; }
+.nav-cta { background: var(--amber); padding: 8px 18px; border-radius: 6px; color: #000 !important; }
 
-        <div class="hero-btns">
-            <a href="#contact" class="btn-primary">Start Transformation</a>
-            <a href="#courses" class="btn-secondary">View Syllabus</a>
-        </div>
+/* HERO & INFINITY */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.devops-infinity { width: 450px; margin: 0 auto 1.5rem; }
+.infinity-path { animation: flow 10s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -200; } }
 
-        <div class="stats">
-            <div><h3>10+</h3><p>Real-World Projects</p></div>
-            <div><h3>1:1</h3><p>Direct Mentorship</p></div>
-            <div><h3>24/7</h3><p>Lab Access</p></div>
-        </div>
-    </div>
-</header>
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+.hero h1 span { color: var(--amber); }
+.hero p { color: #94a3b8; max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; }
 
-<main>
-    <section id="tools" class="reveal">
-        <h2>Tools You Will Master</h2>
-        <div class="tools-grid">
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"><span>AWS</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="K8s"><span>Kubernetes</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" alt="Terraform"><span>Terraform</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span>Jenkins</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
-            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" alt="Ansible"><span>Ansible</span></div>
-        </div>
-    </section>
+/* BUTTONS */
+.btn-primary, .btn-secondary, .btn-submit {
+    padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 800;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: inline-block;
+}
+.btn-primary, .btn-submit { background: var(--amber); color: #000; border: none; cursor: pointer; }
+.btn-secondary { border: 2px solid var(--amber); color: var(--amber); margin-left: 15px; }
 
-    <section class="features">
-        <div class="feature-card">
-            <i class="fas fa-server"></i>
-            <h3>Live Deployments</h3>
-            <p>Don't just learn theory. Build CI/CD pipelines and deploy apps to live AWS environments.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-briefcase"></i>
-            <h3>Job-Ready Portfolio</h3>
-            <p>Mock interviews, LinkedIn optimization, and resume reviews tailored for the 2026 market.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-user-tie"></i>
-            <h3>Industry Mentors</h3>
-            <p>Get coached by engineers working in top-tier tech firms to solve real-world blockers.</p>
-        </div>
-    </section>
+.btn-primary:hover, .btn-submit:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4); background: #fff; }
 
-    <section id="contact">
-        <div class="form-wrapper">
-            <h2>Apply for the Next Cohort</h2>
-            <p>Seats are limited for personalized mentorship.</p>
-            <form action="https://formspree.io/f/mkokzgrk" method="POST" class="application-form">
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Work Email" required>
-                </div>
-                <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <select name="level">
-                    <option value="" disabled selected>Select Your Experience</option>
-                    <option>Fresher / Student</option>
-                    <option>IT Professional (Non-DevOps)</option>
-                    <option>Experienced Engineer</option>
-                </select>
-                <textarea name="goal" placeholder="What is your primary career goal?"></textarea>
-                <button type="submit" class="btn-submit">Submit Application</button>
-            </form>
-        </div>
-    </section>
-</main>
+/* TOOLS GRID */
+.tools-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; padding: 2rem 0; }
+.tool-card { 
+    background: var(--card); padding: 20px; border-radius: 15px; width: 110px; 
+    border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; text-align: center;
+}
+.tool-card img { width: 40px; height: 40px; margin-bottom: 10px; }
+.tool-card:hover { border-color: var(--amber); transform: scale(1.1); }
+.tool-card span { font-size: 0.75rem; color: #94a3b8; font-weight: bold; }
 
-<footer>
-    <p>© 2026 DevOps by Praneeth. Empowering the next generation of Cloud Architects.</p>
-</footer>
+/* CURRICULUM */
+.curriculum-container { display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; }
+.course-box { background: var(--card); padding: 2.5rem; border-radius: 20px; width: 350px; text-align: left; }
+.premium { border: 1.5px solid var(--amber); }
+.badge { font-size: 0.7rem; text-transform: uppercase; padding: 4px 10px; background: #1e293b; border-radius: 20px; font-weight: 800; }
+.yellow { background: var(--amber); color: #000; }
+.course-box ul { list-style: none; margin-top: 1.5rem; }
+.course-box li { margin-bottom: 12px; color: #cbd5e1; }
+.course-box li::before { content: "⚡ "; color: var(--amber); }
 
-<script src="script.js"></script>
-</body>
-</html>
+/* ENQUIRY BOX (CENTERED & SMALL) */
+#contact { padding: 80px 0; display: flex; justify-content: center; }
+.enquiry-card { 
+    background: var(--card); padding: 3rem; border-radius: 25px; width: 100%; 
+    max-width: 420px; text-align: center; border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.enquiry-card h2 { margin-bottom: 0.5rem; }
+.enquiry-card p { color: #94a3b8; margin-bottom: 2rem; font-size: 0.9rem; }
+input, select { 
+    width: 100%; padding: 14px; margin-bottom: 1rem; border-radius: 8px; 
+    background: #020617; border: 1px solid #1e293b; color: #fff; 
+}
+.btn-submit { width: 100%; margin-top: 10px; }
+
+section { padding: 100px 10%; text-align: center; }
+.title { font-size: 2.5rem; margin-bottom: 3rem; }
+footer { text-align: center; padding: 3rem; color: #475569; }
+
+@media (max-width: 768px) {
+    .curriculum-container { flex-direction: column; align-items: center; }
+    .hero h1 { font-size: 2.5rem; }
+}
