@@ -1,165 +1,109 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps by Praneeth | Cloud & DevOps Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-body{
-background:#020617;
-color:#fff;
-}
+<nav class="navbar">
+    <div class="logo">DevOps by <span>Praneeth</span></div>
+    <div class="nav-links">
+        <a href="#tools">Tech Stack</a>
+        <a href="#courses">Curriculum</a>
+        <a href="#contact" class="nav-cta">Apply Now</a>
+    </div>
+</nav>
 
-/* NAV */
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-position:fixed;
-width:100%;
-background:#020617;
-}
+<header class="hero">
+    <div class="hero-content">
+        <div class="infinity-logo">
+            <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M150,180 a60,60 0 1,1 0,-120 a60,60 0 1,1 0,120 Q250,180 350,60 a60,60 0 1,1 0,120 a60,60 0 1,1 0,-120 Q250,60 150,180 z" 
+                      fill="none" stroke="#f59e0b" stroke-width="20" stroke-linecap="round"/>
+            </svg>
+        </div>
 
-.logo span{color:#f59e0b;}
+        <h1>Become a <span>Cloud or DevOps Engineer</span></h1>
+        <p>Master AWS, Docker, and Kubernetes with production-grade projects and high-impact mentorship.</p>
 
-.nav-links a{
-margin-left:20px;
-text-decoration:none;
-color:#fff;
-}
+        <div class="hero-btns">
+            <a href="#contact" class="btn-primary">Start Transformation</a>
+            <a href="#courses" class="btn-secondary">View Syllabus</a>
+        </div>
 
-.nav-cta{
-background:#f59e0b;
-padding:8px 15px;
-border-radius:6px;
-color:black;
-}
+        <div class="stats">
+            <div><h3>10+</h3><p>Real-World Projects</p></div>
+            <div><h3>1:1</h3><p>Direct Mentorship</p></div>
+            <div><h3>24/7</h3><p>Lab Access</p></div>
+        </div>
+    </div>
+</header>
 
-/* HERO */
-.hero{
-height:100vh;
-background:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-}
+<main>
+    <section id="tools" class="reveal">
+        <h2>Tools You Will Master</h2>
+        <div class="tools-grid">
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"><span>AWS</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="K8s"><span>Kubernetes</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" alt="Terraform"><span>Terraform</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span>Jenkins</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+            <div class="tool-item"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" alt="Ansible"><span>Ansible</span></div>
+        </div>
+    </section>
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-}
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-server"></i>
+            <h3>Live Deployments</h3>
+            <p>Don't just learn theory. Build CI/CD pipelines and deploy apps to live AWS environments.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Job-Ready Portfolio</h3>
+            <p>Mock interviews, LinkedIn optimization, and resume reviews tailored for the 2026 market.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-user-tie"></i>
+            <h3>Industry Mentors</h3>
+            <p>Get coached by engineers working in top-tier tech firms to solve real-world blockers.</p>
+        </div>
+    </section>
 
-.hero-content{
-position:relative;
-text-align:center;
-max-width:700px;
-}
+    <section id="contact">
+        <div class="form-wrapper">
+            <h2>Apply for the Next Cohort</h2>
+            <p>Seats are limited for personalized mentorship.</p>
+            <form action="https://formspree.io/f/mkokzgrk" method="POST" class="application-form">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Work Email" required>
+                </div>
+                <input type="tel" name="phone" placeholder="WhatsApp Number" required>
+                <select name="level">
+                    <option value="" disabled selected>Select Your Experience</option>
+                    <option>Fresher / Student</option>
+                    <option>IT Professional (Non-DevOps)</option>
+                    <option>Experienced Engineer</option>
+                </select>
+                <textarea name="goal" placeholder="What is your primary career goal?"></textarea>
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+</main>
 
-.logo-img{
-width:60px;
-margin-bottom:20px;
-}
+<footer>
+    <p>© 2026 DevOps by Praneeth. Empowering the next generation of Cloud Architects.</p>
+</footer>
 
-.hero h1 span{color:#f59e0b;}
-
-.hero p{margin:20px 0;color:#cbd5e1;}
-
-.btn-primary{
-background:#f59e0b;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-color:black;
-margin-right:10px;
-}
-
-.btn-secondary{
-border:1px solid #f59e0b;
-padding:12px 25px;
-text-decoration:none;
-color:#f59e0b;
-}
-
-.stats{
-display:flex;
-justify-content:center;
-gap:40px;
-margin-top:40px;
-}
-
-.stats h3{color:#f59e0b;}
-
-/* SECTIONS */
-section{
-padding:80px 10%;
-text-align:center;
-}
-
-.tools img{
-width:50px;
-margin:15px;
-}
-
-.features{
-display:flex;
-justify-content:center;
-gap:30px;
-}
-
-.feature{
-background:#0f172a;
-padding:30px;
-border-radius:12px;
-}
-
-.cards{
-display:flex;
-justify-content:center;
-gap:30px;
-}
-
-.card{
-background:#0f172a;
-padding:30px;
-border-radius:12px;
-}
-
-.highlight{
-border:1px solid #f59e0b;
-}
-
-/* FORM */
-.form-box{
-background:#0f172a;
-padding:40px;
-max-width:500px;
-margin:auto;
-border-radius:15px;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-background:#020617;
-border:none;
-color:white;
-}
-
-button{
-width:100%;
-padding:12px;
-background:#f59e0b;
-border:none;
-border-radius:8px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-color:#94a3b8;
-}
+<script src="script.js"></script>
+</body>
+</html>
