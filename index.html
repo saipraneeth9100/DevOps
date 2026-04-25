@@ -1,158 +1,711 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps by Praneeth</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>DevOps Mastery — by Praneeth | Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- LOADER -->
-
+<!-- ══════════════════════════════════════
+     LOADER
+══════════════════════════════════════ -->
 <div id="loader">
-  <div class="loader-box">
-    <h2>Loading</h2>
-    <div class="progress"><div id="bar"></div></div>
-    <span id="percent">0%</span>
+  <canvas id="loader-canvas"></canvas>
+  <div class="loader-content">
+    <div class="loader-logo">DEVOPS<span>.</span></div>
+    <div class="loader-counter">
+      <span id="loader-num">0</span>
+      <span class="loader-pct">%</span>
+    </div>
+    <div class="loader-track">
+      <div class="loader-fill" id="loader-fill"></div>
+      <div class="loader-glow" id="loader-glow"></div>
+    </div>
+    <div class="loader-msg" id="loader-msg">Initializing...</div>
   </div>
+  <div class="loader-corner tl"></div>
+  <div class="loader-corner tr"></div>
+  <div class="loader-corner bl"></div>
+  <div class="loader-corner br"></div>
 </div>
 
-<!-- NAV -->
-
-<nav class="navbar glass">
-  <div class="logo">DevOps <span>by Praneeth</span></div>
-  <a href="#contact" class="nav-btn">Apply Now</a>
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-wrap">
+    <div class="nav-logo">DEVOPS<em>.</em><span>by Praneeth</span></div>
+    <ul class="nav-links">
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#enroll">Enroll</a></li>
+    </ul>
+    <a href="#enroll" class="nav-btn">
+      <span>Free Demo</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
 </nav>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <!-- Layered backgrounds -->
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-vignette"></div>
 
-<header class="hero">
-  <div class="overlay"></div>
+  <!-- Animated particles -->
+  <canvas id="particle-canvas"></canvas>
 
-  <div class="hero-content">
-    <h1>Become a <span>DevOps Engineer</span></h1>
-    <p>Master AWS, Kubernetes & Real-Time Projects with 1:1 Mentorship</p>
-
-```
-<div class="pipeline">
-  <span>Plan</span><span>Code</span><span>Build</span>
-  <span>Test</span><span>Release</span><span>Deploy</span>
-  <span>Operate</span><span>Monitor</span>
-</div>
-
-<div class="cta-group">
-  <a href="#contact" class="btn-primary">Get Started</a>
-  <a href="#tools" class="btn-secondary">View Stack</a>
-</div>
-```
-
-  </div>
-</header>
-
-<!-- STATS -->
-
-<section class="stats">
-  <div class="glass stat">
-    <h3 data-count="1000">0</h3>
-    <p>Students</p>
-  </div>
-  <div class="glass stat">
-    <h3 data-count="18">0</h3>
-    <p>LPA Max</p>
-  </div>
-  <div class="glass stat">
-    <h3>1:1</h3>
-    <p>Mentorship</p>
-  </div>
-</section>
-
-<!-- WHY -->
-
-<section class="why">
-  <h2>Why Choose This Program?</h2>
-  <div class="why-grid">
-    <div class="glass why-card">
-      <h3>Real-Time Projects</h3>
-      <p>Hands-on AWS, Kubernetes & CI/CD</p>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        Hyderabad's Premium AWS DevOps Program
+      </div>
+      <h1 class="hero-h1">
+        <span class="line1">MASTER</span>
+        <span class="line2">AWS <em>DEVOPS</em></span>
+        <span class="line3">IN 45 DAYS</span>
+      </h1>
+      <p class="hero-sub">
+        From zero to job-ready. Real cloud infrastructure, real CI/CD pipelines, real Kubernetes — not theory. 
+        Land your first DevOps role with a curriculum built for the Hyderabad market.
+      </p>
+      <div class="hero-ctas">
+        <a href="#enroll" class="cta-primary">
+          Book Free Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#roadmap" class="cta-ghost">View Roadmap</a>
+      </div>
+      <div class="hero-chips">
+        <div class="chip"><span class="chip-dot"></span>Live Zoom Classes</div>
+        <div class="chip"><span class="chip-dot"></span>Max 15 Students</div>
+        <div class="chip"><span class="chip-dot"></span>Weekend Batches</div>
+      </div>
     </div>
-    <div class="glass why-card">
-      <h3>Placement Support</h3>
-      <p>Mock interviews & referrals</p>
+
+    <div class="hero-right">
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">devops-master ~ zsh</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">kubectl get pods -n production</span></div>
+          <div class="t-line t-out">NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; READY&nbsp; STATUS&nbsp;&nbsp;&nbsp; RESTARTS</div>
+          <div class="t-line t-out t-green">app-deploy-7d4f9b&nbsp;&nbsp; 3/3&nbsp;&nbsp;&nbsp; Running&nbsp;&nbsp; 0</div>
+          <div class="t-line t-out t-green">api-svc-6c8d2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2/2&nbsp;&nbsp;&nbsp; Running&nbsp;&nbsp; 0</div>
+          <div class="t-line t-out t-green">db-proxy-5e1f3c&nbsp;&nbsp;&nbsp;&nbsp; 1/1&nbsp;&nbsp;&nbsp; Running&nbsp;&nbsp; 0</div>
+          <div class="t-line" style="margin-top:12px"><span class="t-prompt">$</span> <span class="t-cmd">terraform apply -auto-approve</span></div>
+          <div class="t-line t-out">Plan: 12 to add, 3 to change, 0 to destroy.</div>
+          <div class="t-line t-out t-gold">Apply complete! Resources: 12 added.</div>
+          <div class="t-line" style="margin-top:12px"><span class="t-prompt">$</span> <span class="t-cmd">aws eks update-kubeconfig --name prod-cluster</span></div>
+          <div class="t-line t-out t-blue">Updated context arn:aws:eks:ap-south-1...</div>
+          <div class="t-line" style="margin-top:12px"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+        </div>
+      </div>
     </div>
-    <div class="glass why-card">
-      <h3>Industry Tools</h3>
-      <p>Docker, Terraform, Monitoring</p>
+  </div>
+
+  <!-- Bottom stats ticker -->
+  <div class="hero-ticker">
+    <div class="ticker-item"><strong>45 Days</strong> &nbsp;·&nbsp; Complete Program</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>30 Sessions</strong> &nbsp;·&nbsp; Weekend Live Classes</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>11 Tools</strong> &nbsp;·&nbsp; Industry Stack</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>₹6L – ₹18L</strong> &nbsp;·&nbsp; Salary Range</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>Hyderabad</strong> &nbsp;·&nbsp; Market Focused</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>1:1</strong> &nbsp;·&nbsp; Mentorship</div>
+    <div class="ticker-sep">◆</div>
+    <div class="ticker-item"><strong>Free Demo</strong> &nbsp;·&nbsp; No Commitment</div>
+    <div class="ticker-sep">◆</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     AWS OVERVIEW / WHY NOW
+══════════════════════════════════════ -->
+<section class="overview-section" id="overview">
+  <div class="bg-tech-1"></div>
+  <div class="container">
+    <div class="section-label-row">
+      <div class="s-label">Why AWS DevOps</div>
+    </div>
+    <div class="overview-grid">
+      <div class="ov-left reveal">
+        <h2 class="sec-title">The Cloud<br>Gold Rush<br><em>Is Happening Now</em></h2>
+        <p class="sec-body">
+          Every company — startup, MNC, government — is migrating to cloud-native infrastructure. AWS DevOps Engineers are the architects of this shift. The skill gap in India is massive, and Hyderabad is at the epicenter. Companies are hiring freshers with the right stack at packages that take most engineers 5 years to reach.
+        </p>
+        <div class="ov-stats">
+          <div class="ov-stat">
+            <div class="ov-num">31%</div>
+            <div class="ov-lbl">AWS Global Cloud Market Share</div>
+          </div>
+          <div class="ov-stat">
+            <div class="ov-num">8/10</div>
+            <div class="ov-lbl">Indian Enterprises Run on AWS</div>
+          </div>
+          <div class="ov-stat">
+            <div class="ov-num">50K+</div>
+            <div class="ov-lbl">Open DevOps Roles in India</div>
+          </div>
+        </div>
+      </div>
+      <div class="ov-right reveal">
+        <div class="ov-img-wrap">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=85&fit=crop" alt="Server room" class="ov-main-img">
+          <div class="ov-img-overlay"></div>
+        </div>
+        <div class="ov-cards-float">
+          <div class="ov-float-card">
+            <div class="ofc-icon">💰</div>
+            <div>
+              <strong>Freshers Earning ₹6L–₹10L</strong>
+              <span>With the right DevOps stack, freshers bypass 3–4 years of traditional career growth</span>
+            </div>
+          </div>
+          <div class="ov-float-card">
+            <div class="ofc-icon">🏭</div>
+            <div>
+              <strong>Learn by Doing, Not Watching</strong>
+              <span>Every concept is built on a real AWS environment — your own cloud lab</span>
+            </div>
+          </div>
+          <div class="ov-float-card">
+            <div class="ofc-icon">🎯</div>
+            <div>
+              <strong>Interview-First Design</strong>
+              <span>Curriculum mirrors exactly what Capgemini, HCL, Wipro & startups ask</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ROADMAP -->
-
-<section class="roadmap">
-  <h2>Course Roadmap</h2>
-  <div class="grid">
-    <div class="glass card">Linux & Networking</div>
-    <div class="glass card">AWS</div>
-    <div class="glass card">Docker</div>
-    <div class="glass card">Kubernetes</div>
-    <div class="glass card">CI/CD</div>
+<!-- ══════════════════════════════════════
+     SALARY BAND
+══════════════════════════════════════ -->
+<section class="salary-band">
+  <div class="container">
+    <div class="salary-inner">
+      <div class="sal-left reveal">
+        <div class="s-label" style="margin-bottom:16px">Salary Landscape 2026</div>
+        <h2 class="sec-title" style="font-size:clamp(1.8rem,3vw,2.4rem)">DevOps Pay Scale<br><em>Across Experience</em></h2>
+      </div>
+      <div class="sal-right reveal">
+        <div class="salary-bars">
+          <div class="sal-bar-item">
+            <div class="sal-exp">Fresher (0–1 yr)</div>
+            <div class="sal-track"><div class="sal-fill" style="width:35%"></div></div>
+            <div class="sal-pkg">₹4L – ₹7L</div>
+          </div>
+          <div class="sal-bar-item">
+            <div class="sal-exp">Junior (1–3 yrs)</div>
+            <div class="sal-track"><div class="sal-fill" style="width:58%"></div></div>
+            <div class="sal-pkg">₹7L – ₹12L</div>
+          </div>
+          <div class="sal-bar-item">
+            <div class="sal-exp">Mid (3–5 yrs)</div>
+            <div class="sal-track"><div class="sal-fill" style="width:78%"></div></div>
+            <div class="sal-pkg">₹12L – ₹20L</div>
+          </div>
+          <div class="sal-bar-item">
+            <div class="sal-exp">Senior (5+ yrs)</div>
+            <div class="sal-track"><div class="sal-fill" style="width:100%"></div></div>
+            <div class="sal-pkg">₹20L – ₹40L+</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ══════════════════════════════════════
+     TECH STACK
+══════════════════════════════════════ -->
+<section class="stack-section" id="stack">
+  <div class="bg-tech-2"></div>
+  <div class="container">
+    <div class="stack-header reveal">
+      <div class="s-label">Complete Tech Stack</div>
+      <h2 class="sec-title">11 Tools.<br><em>One Career.</em></h2>
+      <p class="sec-body" style="max-width:520px;margin:0 auto">Industry's most demanded DevOps toolkit — the same stack running inside MNCs across Hyderabad, Bengaluru, and Pune.</p>
+    </div>
+    <div class="tools-grid reveal">
 
-<section class="testimonials">
-  <h2>Success Stories</h2>
-  <div class="grid">
-    <div class="glass card">“Got placed at 12 LPA 🚀”</div>
-    <div class="glass card">“Switched from fresher to DevOps role”</div>
-    <div class="glass card">“Best mentorship experience”</div>
+      <!-- Row 1 -->
+      <div class="tool-card" data-tool="Linux">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="tool-img">
+        </div>
+        <div class="tool-name">Linux</div>
+        <div class="tool-desc">Shell, permissions, processes, networking</div>
+        <div class="tool-tag">Foundation</div>
+      </div>
+
+      <div class="tool-card" data-tool="Git">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git" class="tool-img">
+        </div>
+        <div class="tool-name">Git & GitHub</div>
+        <div class="tool-desc">Branching, PRs, workflows, collaboration</div>
+        <div class="tool-tag">Version Control</div>
+      </div>
+
+      <div class="tool-card" data-tool="AWS">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="tool-img">
+        </div>
+        <div class="tool-name">AWS</div>
+        <div class="tool-desc">EC2, S3, VPC, IAM, RDS, EKS, CloudWatch</div>
+        <div class="tool-tag">Core Cloud</div>
+      </div>
+
+      <div class="tool-card" data-tool="Docker">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" class="tool-img">
+        </div>
+        <div class="tool-name">Docker</div>
+        <div class="tool-desc">Images, containers, Compose, ECR</div>
+        <div class="tool-tag">Containers</div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="tool-card" data-tool="Kubernetes">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" class="tool-img">
+        </div>
+        <div class="tool-name">Kubernetes</div>
+        <div class="tool-desc">Pods, deployments, EKS, Helm, HPA</div>
+        <div class="tool-tag">Orchestration</div>
+      </div>
+
+      <div class="tool-card" data-tool="Jenkins">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="Jenkins" class="tool-img">
+        </div>
+        <div class="tool-name">Jenkins</div>
+        <div class="tool-desc">Pipelines, stages, triggers, integrations</div>
+        <div class="tool-tag">CI/CD</div>
+      </div>
+
+      <div class="tool-card" data-tool="Terraform">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg" alt="Terraform" class="tool-img">
+        </div>
+        <div class="tool-name">Terraform</div>
+        <div class="tool-desc">IaC, modules, state, workspaces</div>
+        <div class="tool-tag">Infrastructure</div>
+      </div>
+
+      <div class="tool-card" data-tool="Ansible">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg" alt="Ansible" class="tool-img">
+        </div>
+        <div class="tool-name">Ansible</div>
+        <div class="tool-desc">Playbooks, roles, config management</div>
+        <div class="tool-tag">Automation</div>
+      </div>
+
+      <!-- Row 3 (centered 3) -->
+      <div class="tool-card" data-tool="Prometheus">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" alt="Prometheus" class="tool-img">
+        </div>
+        <div class="tool-name">Prometheus</div>
+        <div class="tool-desc">Metrics, alerting rules, PromQL</div>
+        <div class="tool-tag">Monitoring</div>
+      </div>
+
+      <div class="tool-card" data-tool="Grafana">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg" alt="Grafana" class="tool-img">
+        </div>
+        <div class="tool-name">Grafana</div>
+        <div class="tool-desc">Dashboards, visualization, alerts</div>
+        <div class="tool-tag">Observability</div>
+      </div>
+
+      <div class="tool-card" data-tool="Python">
+        <div class="tool-icon-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="tool-img">
+        </div>
+        <div class="tool-name">Python + Boto3</div>
+        <div class="tool-desc">Automation scripts, AWS SDK</div>
+        <div class="tool-tag">Scripting</div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- MENTOR -->
-
-<section class="mentor">
-  <h2>Your Mentor</h2>
-  <div class="glass card">
-    <p>Praneeth - DevOps Engineer with real-time experience in AWS, Kubernetes & Production systems.</p>
+<!-- ══════════════════════════════════════
+     AWS DEEP DIVE
+══════════════════════════════════════ -->
+<section class="aws-section">
+  <div class="bg-tech-3"></div>
+  <div class="container">
+    <div class="aws-header reveal">
+      <div class="s-label">AWS — Deep Dive</div>
+      <h2 class="sec-title">Why AWS Is the<br><em>Career Multiplier</em></h2>
+      <p class="sec-body" style="max-width:560px;margin:0 auto">AWS powers 31% of the internet. Learning it isn't optional for a DevOps career — it's the entire foundation. Here's what you'll master.</p>
+    </div>
+    <div class="aws-cards-grid reveal">
+      <div class="aws-card">
+        <div class="aws-icon">🖥️</div>
+        <h3>Compute & Auto Scaling</h3>
+        <p>EC2 instances, Auto Scaling Groups, Load Balancers, Spot instances — deploy apps that handle millions of hits and scale automatically under load.</p>
+      </div>
+      <div class="aws-card">
+        <div class="aws-icon">🔐</div>
+        <h3>Security & IAM</h3>
+        <p>IAM roles, policies, Secrets Manager, KMS encryption, VPC security groups — the topics that get you hired at enterprise MNCs who take compliance seriously.</p>
+      </div>
+      <div class="aws-card">
+        <div class="aws-icon">🌐</div>
+        <h3>Networking Deep Dive</h3>
+        <p>VPC architecture, subnets, NAT Gateways, Route Tables — the questions that separate juniors from seniors in every Hyderabad DevOps interview round.</p>
+      </div>
+      <div class="aws-card">
+        <div class="aws-icon">🗄️</div>
+        <h3>Managed Databases</h3>
+        <p>RDS, Aurora, DynamoDB — when to use what, Multi-AZ high availability, connection pooling, and backup strategies used in production systems.</p>
+      </div>
+      <div class="aws-card">
+        <div class="aws-icon">📊</div>
+        <h3>CloudWatch & Monitoring</h3>
+        <p>Metrics, log groups, dashboards, alarms and SNS notifications — learn to monitor production infrastructure like a senior engineer on call.</p>
+      </div>
+      <div class="aws-card">
+        <div class="aws-icon">🚢</div>
+        <h3>EKS & Containers</h3>
+        <p>Elastic Kubernetes Service — cluster setup, managed node groups, Helm chart deployments, ingress controllers, and production-grade rollout strategies.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ══════════════════════════════════════
+     ROADMAP
+══════════════════════════════════════ -->
+<section class="roadmap-section" id="roadmap">
+  <div class="container">
+    <div class="roadmap-header reveal">
+      <div class="s-label">30 Sessions · 45 Days</div>
+      <h2 class="sec-title">The Roadmap<br><em>Zero to Job-Ready</em></h2>
+      <p class="sec-body" style="max-width:520px;margin:0 auto">A battle-tested curriculum built around what hiring managers actually test. No fluff, no filler.</p>
+    </div>
 
-<section id="contact">
-  <div class="card glass">
-    <h2>Start Your Journey 🚀</h2>
+    <div class="roadmap-wrap reveal">
+      <div class="rm-phase">
+        <div class="rm-phase-label">Phase 1 — Week 1–2</div>
+        <div class="rm-cards">
+          <div class="rm-card">
+            <div class="rm-num">01</div>
+            <div class="rm-body">
+              <h4>Linux & Networking</h4>
+              <ul>
+                <li>Shell scripting & bash</li>
+                <li>File system & permissions</li>
+                <li>TCP/IP, DNS, SSH, ports</li>
+                <li>Process & service management</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card">
+            <div class="rm-num">02</div>
+            <div class="rm-body">
+              <h4>Git & Version Control</h4>
+              <ul>
+                <li>Branching strategies</li>
+                <li>Pull requests & merges</li>
+                <li>Git workflows (Gitflow)</li>
+                <li>GitHub Actions intro</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card">
+            <div class="rm-num">03</div>
+            <div class="rm-body">
+              <h4>AWS Foundations</h4>
+              <ul>
+                <li>EC2, S3, IAM, VPC</li>
+                <li>Security Groups & NACLs</li>
+                <li>Route53 & CloudFront</li>
+                <li>ALB & Target Groups</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-```
-<form action="https://formspree.io/f/mkokzgrk" method="POST">
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="tel" name="phone" placeholder="Mobile Number" required>
+      <div class="rm-connector">
+        <div class="rm-line"></div>
+      </div>
 
-  <select name="level">
-    <option>Fresher</option>
-    <option>Working Professional</option>
-  </select>
+      <div class="rm-phase">
+        <div class="rm-phase-label">Phase 2 — Week 2–4</div>
+        <div class="rm-cards">
+          <div class="rm-card rm-card-accent">
+            <div class="rm-num">04</div>
+            <div class="rm-body">
+              <h4>AWS Advanced</h4>
+              <ul>
+                <li>RDS, Secrets Manager</li>
+                <li>CloudWatch & alarms</li>
+                <li>Auto Scaling Groups</li>
+                <li>Lambda & API Gateway</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card rm-card-accent">
+            <div class="rm-num">05</div>
+            <div class="rm-body">
+              <h4>Docker</h4>
+              <ul>
+                <li>Dockerfiles & builds</li>
+                <li>Volumes & networks</li>
+                <li>Docker Compose</li>
+                <li>ECR push & pull</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card rm-card-accent">
+            <div class="rm-num">06</div>
+            <div class="rm-body">
+              <h4>Kubernetes & EKS</h4>
+              <ul>
+                <li>Pods, deployments, services</li>
+                <li>ConfigMaps & Secrets</li>
+                <li>Ingress & HPA</li>
+                <li>EKS cluster on AWS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <button type="submit" class="btn-primary">Apply Now</button>
-</form>
-```
+      <div class="rm-connector">
+        <div class="rm-line"></div>
+      </div>
 
+      <div class="rm-phase">
+        <div class="rm-phase-label">Phase 3 — Week 4–6</div>
+        <div class="rm-cards">
+          <div class="rm-card">
+            <div class="rm-num">07</div>
+            <div class="rm-body">
+              <h4>CI/CD Pipelines</h4>
+              <ul>
+                <li>Jenkins declarative pipelines</li>
+                <li>Stages, agents, triggers</li>
+                <li>SonarQube integration</li>
+                <li>Deploy to EKS via Jenkins</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card">
+            <div class="rm-num">08</div>
+            <div class="rm-body">
+              <h4>Terraform & Ansible</h4>
+              <ul>
+                <li>HCL modules & variables</li>
+                <li>State files & workspaces</li>
+                <li>Ansible playbooks & roles</li>
+                <li>IaC best practices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-card rm-card-final">
+            <div class="rm-num">🚀</div>
+            <div class="rm-body">
+              <h4>Capstone Project</h4>
+              <ul>
+                <li>3-tier app on EKS</li>
+                <li>Full CI/CD pipeline</li>
+                <li>Prometheus + Grafana setup</li>
+                <li>Mock interview prep</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     WHAT YOU GET
+══════════════════════════════════════ -->
+<section class="perks-section">
+  <div class="bg-tech-4"></div>
+  <div class="container">
+    <div class="perks-header reveal">
+      <div class="s-label">What's Included</div>
+      <h2 class="sec-title">Everything You<br><em>Need to Succeed</em></h2>
+    </div>
+    <div class="perks-grid reveal">
+      <div class="perk-card">
+        <div class="perk-icon">📡</div>
+        <h3>Live Zoom Sessions</h3>
+        <p>Interactive classes every weekend. Ask questions, get answers in real time. No pre-recorded videos you'll never watch.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">📝</div>
+        <h3>Handcrafted Notes</h3>
+        <p>Detailed written notes after every session. Reference material you'll use for the first 2 years of your career.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">🧪</div>
+        <h3>Your Own Cloud Lab</h3>
+        <p>Hands-on practice on real AWS accounts. You build it, you break it, you fix it. That's how engineers learn.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">🎤</div>
+        <h3>Mock Interviews</h3>
+        <p>Simulate Capgemini, HCL, Wipro and startup technical interviews. Know what's coming before it hits you.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">📄</div>
+        <h3>Resume Review</h3>
+        <p>Your resume rewritten for DevOps roles. Keywords, project framing, and ATS optimization for Hyderabad's job market.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon">💬</div>
+        <h3>Lifetime Community</h3>
+        <p>WhatsApp group with batch peers. Doubt resolution, job alerts, and industry news — even after the course ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ENROLL / CONTACT
+══════════════════════════════════════ -->
+<section class="enroll-section" id="enroll">
+  <div class="enroll-bg-img"></div>
+  <div class="enroll-overlay"></div>
+  <div class="container">
+    <div class="enroll-grid">
+      <div class="enroll-left reveal">
+        <div class="s-label">Enroll Today</div>
+        <h2 class="sec-title">Start Your<br><em>DevOps Journey</em></h2>
+        <p class="sec-body">One free demo. No commitment. Come see the curriculum, ask every question you have, and decide if this is the right move for you.</p>
+
+        <div class="enroll-facts">
+          <div class="ef-item">
+            <div class="ef-icon">📅</div>
+            <div>
+              <strong>Next Batch</strong>
+              <span>Starting Soon — Limited Seats</span>
+            </div>
+          </div>
+          <div class="ef-item">
+            <div class="ef-icon">⏰</div>
+            <div>
+              <strong>Weekend Batches</strong>
+              <span>Saturday & Sunday — 10AM to 1PM IST</span>
+            </div>
+          </div>
+          <div class="ef-item">
+            <div class="ef-icon">💻</div>
+            <div>
+              <strong>Mode</strong>
+              <span>Online via Zoom — join from anywhere</span>
+            </div>
+          </div>
+          <div class="ef-item">
+            <div class="ef-icon">👥</div>
+            <div>
+              <strong>Batch Size</strong>
+              <span>Maximum 15 students per batch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="enroll-form-wrap reveal">
+        <div class="enroll-form">
+          <div class="form-title">Register for <span>Free Demo</span></div>
+          <div class="form-field">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your full name" id="f-name">
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com" id="f-email">
+          </div>
+          <div class="form-field">
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="+91 98765 43210" id="f-phone">
+          </div>
+          <div class="form-field">
+            <label>Current Status</label>
+            <select id="f-status">
+              <option value="">Select your status</option>
+              <option>BTech Final Year Student</option>
+              <option>Fresh Graduate (0–1 year)</option>
+              <option>Working Professional (1–3 years)</option>
+              <option>Working Professional (3+ years)</option>
+              <option>Career Switch</option>
+            </select>
+          </div>
+          <button class="form-submit" id="form-btn" onclick="handleFormSubmit()">
+            <span>Claim Free Demo Seat</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-note">🔒 No spam. We'll only contact you about the demo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
 <footer>
-  <p>© 2026 DevOps by Praneeth</p>
+  <div class="container">
+    <div class="footer-top">
+      <div class="f-logo">DEVOPS<em>.</em><span>by Praneeth</span></div>
+      <ul class="f-links">
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#enroll">Enroll</a></li>
+      </ul>
+      <div class="f-contact">
+        Hyderabad, Telangana, India<br>
+        <a href="mailto:devops@praneeth.in">devops@praneeth.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DevOps by Praneeth. All rights reserved.</span>
+      <span>Built for Hyderabad's next-generation cloud engineers.</span>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
