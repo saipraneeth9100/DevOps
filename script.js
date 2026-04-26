@@ -23,7 +23,7 @@
     ];
   
     function updateLoader() {
-      progress += Math.random() * 6 + 2; // smooth + realistic
+      progress += Math.random() * 6 + 2;
   
       if (progress > 100) progress = 100;
   
@@ -64,7 +64,7 @@
         }
       });
   
-      // Reveal animations (scroll)
+      // Reveal animations
       const revealEls = document.querySelectorAll(".reveal");
   
       const observer = new IntersectionObserver(
@@ -80,7 +80,7 @@
   
       revealEls.forEach((el) => observer.observe(el));
   
-      // Animate salary bars
+      // Salary bars animation
       const bars = document.querySelectorAll(".sal-fill");
       bars.forEach((bar) => {
         const width = bar.style.width;
@@ -104,7 +104,7 @@
       });
     }
   
-    // Form handler
+    // Form UX handler (visual only)
     window.handleFormSubmit = function () {
       const btn = document.getElementById("form-btn");
       const name = document.getElementById("f-name").value;
@@ -135,3 +135,25 @@
     document.body.style.overflow = "hidden";
     requestAnimationFrame(updateLoader);
   })();
+  
+  
+  // ===== SAFE FORM FIX (FINAL — NO BREAK) =====
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("demo-form");
+  
+    if (!form) return;
+  
+    form.addEventListener("submit", function () {
+      const emailInput = document.getElementById("f-email");
+      const hiddenEmail = document.getElementById("hidden-email");
+  
+      if (emailInput && hiddenEmail) {
+        hiddenEmail.value = emailInput.value;
+      }
+  
+      const btnText = document.getElementById("btn-text");
+      if (btnText) {
+        btnText.innerText = "Submitting...";
+      }
+    });
+  });
